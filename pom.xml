@@ -16,6 +16,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <lombok.version>1.18.20</lombok.version>
         <junit5.version>5.7.2</junit5.version>
+        <maven.surefire.version>2.22.2</maven.surefire.version>
     </properties>
 
     <dependencies>
@@ -31,5 +32,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
